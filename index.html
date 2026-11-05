@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#080d18">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="NOVA">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>NOVA SURVIVAL</title>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <div class="orb" aria-hidden="true"></div>
+        <div><div class="brand-name">NOVA</div><div class="brand-sub">SURVIVAL · V1</div></div>
+      </div>
+      <div class="status"><span class="dot"></span><span id="connection">MODE LOCAL</span></div>
+    </header>
+
+    <section class="welcome" id="welcome">
+      <p class="eyebrow">SYSTÈME AUTONOME</p>
+      <h1>Je suis là.<br><span>Même hors ligne.</span></h1>
+      <p class="intro">Cette première version conserve tes notes sur cet iPhone et reste accessible sans connexion après installation.</p>
+      <div class="quick">
+        <button class="quick-btn" data-prompt="Présente-toi, NOVA.">Qui es-tu ?</button>
+        <button class="quick-btn" data-prompt="Aide-moi à préparer un blackout.">Préparer un blackout</button>
+        <button class="quick-btn" data-prompt="Aide-moi à enregistrer une information importante.">Enregistrer une info</button>
+      </div>
+    </section>
+
+    <section class="chat" id="chat" aria-live="polite">
+      <div class="message nova"><div class="sender">NOVA</div><div class="bubble">Salut. Je suis ta première version locale. Je peux garder des notes sur cet appareil et répondre à quelques demandes simples. Mes capacités restent limitées tant qu'on n'a pas intégré un modèle d'IA.</div></div>
+    </section>
+
+    <section class="memory-panel">
+      <div class="panel-head"><div><p class="eyebrow">MÉMOIRE LOCALE</p><h2>Notes enregistrées</h2></div><span id="memory-count">0 note</span></div>
+      <form id="memory-form">
+        <input id="memory-input" maxlength="500" placeholder="Écris une information à conserver…" autocomplete="off">
+        <button class="save-btn" type="submit">Enregistrer</button>
+      </form>
+      <ul id="memory-list"></ul>
+    </section>
+
+    <footer class="composer">
+      <form id="chat-form">
+        <input id="user-input" maxlength="1000" placeholder="Écris à NOVA…" autocomplete="off">
+        <button type="submit" aria-label="Envoyer">➤</button>
+      </form>
+      <p>V1 locale · Les notes restent dans le stockage de ce navigateur.</p>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
